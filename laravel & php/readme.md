@@ -5,6 +5,6 @@ docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
 
 ##### After the Laravel application has been created, change the database connection settings in the .env file inside the Laravel project. Use the credentials that were set during the MySQL setup or mysql.env file credentials. and db_host equal to mysql as define in docker-compose.yaml    
 
-## use this command to run 
+##### use this command to run after  above command
 
 docker-compose up -d server php mysql 
