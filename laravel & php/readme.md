@@ -18,6 +18,7 @@ docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
 
 After the Laravel application is created, update the .env file located inside the src directory to configure the database connection:
 ```
+DB_CONNECTION=mysql
 DB_HOST=mysql
 DB_PORT=3306
 DB_DATABASE=laravel
@@ -26,6 +27,8 @@ DB_PASSWORD=secert
 ```
 
 Ensure that the DB_HOST is set to mysql, which corresponds to the MySQL service name defined in your docker-compose.yml file. and also mysql.env file for credentials
+
+if use face any error try this command --docker-compose run --rm artisan migrate 
 
 #  Start the Services
 
