@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app                   # bind source code into container
+      - /usr/src/app/node_modules        # prevent host from overwriting node_modules
+    ports:
+      - "3000:3000"                      # host:container
+    working_dir: /usr/src/app
+    command: npm run dev
